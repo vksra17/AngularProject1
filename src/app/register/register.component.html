@@ -1,0 +1,47 @@
+<body>
+    <form [formGroup]="userForm" >
+        <h3>Register</h3>
+        <label>Name*</label>
+        <input type="text" formControlName="name">
+            <!-- <small *ngIf="userForm.get['name'].invalid &&  userForm.get['name'].touched">Username is required</small> -->
+        <label>Email Id*</label>
+        <input type="email" formControlName="email">
+        <!-- <div *ngIf="getControl['Email'].touched && getControl['Email'].invalid" class="alert alert-danger">
+            <div *ngIf="getControl['Email'].errors && getControl['Email'].errors['required']">Email is required.</div>
+            <div *ngIf="getControl['Email'].errors && getControl['Email'].errors['email']">Enter valid email</div>
+        </div> -->
+        <label>Phone number*</label>
+        <input type="text" formControlName="phonenumber">
+        <!-- <div *ngIf="getControl['PhoneNumber'].touched && getControl['PhoneNumber'].invalid" class="alert alert-danger">
+            <div *ngIf="getControl['PhoneNumber'].errors && getControl['PhoneNumber'].errors['required']">Mobile Number
+                is required.</div>
+            <div *ngIf="getControl['PhoneNumber'].errors && getControl['PhoneNumber'].errors['minlength']">Name should
+                be 3 character.</div>
+        </div> -->
+        <label>DATE OF BIRTH*</label>
+        <input type="date" formControlName="DOB">
+        <label>Password*</label>
+        <input type="password" formControlName='password'>
+        <!-- <div *ngIf="getControl['Password'].touched && getControl['Password'].invalid" class="alert alert-danger">
+            <div *ngIf="getControl['Password'].errors && getControl['Password'].errors['required']">Mobile Number is
+                required.</div>
+            <div *ngIf="getControl['Password'].errors && getControl['Password'].errors['minlength']">Name should be 3
+                character.</div>
+        </div> -->
+        <label>Confirm Password*</label>
+        <input type="password" formControlName="confirmpassword">
+        <!-- <div *ngIf="getControl['ConfirmPassword'].touched && getControl['ConfirmPassword'].invalid"
+            class="alert alert-danger">
+            <div *ngIf="getControl['ConfirmPassword'].errors && getControl['ConfirmPassword'].errors['required']">
+                Password is required</div>
+            <div *ngIf="getControl['ConfirmPassword'].errors && getControl['ConfirmPassword'].errors['MustMatch']">
+                Password didn't match</div>
+        </div> -->
+        <h6>*the field is mandatory</h6>
+        <div>
+            <button type="submit" value="submit" (click)="post()">Register</button>
+            <button (click)="clear()" type="submit" value="submit">ClearForm</button>
+        </div>
+    </form>
+</body>
+

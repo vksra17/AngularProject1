@@ -1,0 +1,12 @@
+<body>
+    <form [formGroup]="loginform">
+        <h1>LOGIN</h1>
+        <label>Username</label>
+        <input type="text" placeholder="Username" formControlName="email">
+        <label>Password</label>
+        <input type="password" formControlName="password">
+        <button (click)="login()">Login</button>
+        <a>Forget password</a>
+    </form>
+</body>
+<p>it works</p>
