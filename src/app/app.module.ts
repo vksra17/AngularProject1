@@ -11,7 +11,18 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 import { SigninComponent } from './signin/signin.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { CustomDirective } from './Directives/custom.directive';
+import { AdminComponent } from './admin/admin.component';
+import { AngularFileUploaderModule } from 'angular-file-uploader';
+import { TodoComponent } from './todo/todo.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { CrudComponent } from './crud/crud.component';
+import { AdminviewComponent } from './adminview/adminview.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -19,6 +30,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegisterComponent,
     SigninComponent,
     NavbarComponent,
+    CustomDirective,
+    AdminComponent,
+    TodoComponent,
+    CrudComponent,
+    AdminviewComponent,
 
   ],
   imports: [
@@ -29,7 +45,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     ReactiveFormsModule,
     FormsModule,
   HttpClientModule,
-  MatIconModule
+  MatIconModule,
+  AngularFileUploaderModule,
+  MatCardModule,
+  MatButtonModule,
+  DragDropModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatFormFieldModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

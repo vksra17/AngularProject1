@@ -1,6 +1,7 @@
 <body>
+    
     <form [formGroup]="userForm" >
-        <h3>Register</h3>
+        <h1 appCustom>Register Here</h1>
         <label>Name*</label>
         <input type="text" formControlName="name">
             <!-- <small *ngIf="userForm.get['name'].invalid &&  userForm.get['name'].touched">Username is required</small> -->
@@ -38,7 +39,7 @@
                 Password didn't match</div>
         </div> -->
         <h6>*the field is mandatory</h6>
-        <div>
+        <div>/
             <button type="submit" value="submit" (click)="post()">Register</button>
             <button (click)="clear()" type="submit" value="submit">ClearForm</button>
         </div>

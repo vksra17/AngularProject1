@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api : ApiService, private router:Router) { }
 
   ngOnInit(): void {
+    
   }
-
+ opendialog(){
+  // if(localStorage.getItem("token")){
+  //   this.api.gotohome(localStorage.getItem("token")).subscribe({
+  //     next:(res)=>{
+  //       if(!res){
+  //         console.log("Error ")
+  //       }
+  //       else{
+  //         console.log(res)
+  //       }
+  //     }})
+  // }
+  this.router.navigate(['/adminview'])
+ }
 }

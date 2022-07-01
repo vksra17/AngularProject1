@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder,Validators} from '@angular/forms';
-import { ApiService } from '../api.service';
+import { ApiService } from '../services/api.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
       password:[''],
       confirmpassword:['']
     },{
-      //  validators: this.MustMatch('Password','ConfirmPassword')
+      
     })  
   }
   // MustMatch(controlName:string,matchingControlName:string){
@@ -51,4 +51,5 @@ export class RegisterComponent implements OnInit {
 clear(){
  this.userForm.reset('')
 }
+
 }
